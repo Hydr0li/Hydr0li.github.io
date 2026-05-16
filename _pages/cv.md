@@ -9,56 +9,34 @@ redirect_from:
 
 {% include base_path %}
 
+<p><a class="hydro-button" href="/files/Haizhou_Li_CV.pdf" target="_blank" rel="noopener">Open PDF CV</a></p>
+
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* M.S. in Computer Science, Metropolitan College, Boston University
+* B.S. in Data Analytics in Economics, Virginia Tech
 
-Work experience
+Research
 ======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* Research Assistant for Chen Jing, Ph.D., at Boston University, mentored by Professor Dokyun (DK) Lee at the BIT Lab.
+* Research interests: deep learning, applied machine learning, data analysis, algorithms, and data mining.
+* Work includes abnormal data detection and predictive modeling for company cost analysis.
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+Research Projects
+======
+* Deep Learning NLP algorithm models. Research Assistant for Doctor Chen Jing, Boston University. Mentor: Dokyun (DK) Lee. [GitHub](https://github.com/Hydr0li/RA_NLP)
+* Economic regression analysis on how applicant properties affect credit card application results. Individual Researcher. Mentor: Ali Habibnia, Virginia Tech. 2020.8 - 2020.12. [GitHub](https://github.com/Hydr0li/MachineLearningProject)
+* Last name categorization in census analysis. Individual Researcher. Mentor: Melinda C. Miller, Virginia Tech. 2020.8 - 2020.12. [GitHub](https://github.com/Hydr0li/Last-name-categorization-in-census-analysis)
+* Why top 30 universities are top 30? Quantitative analysis on rankings of universities. Team Leader. Mentor: Chris North, Virginia Tech. 2020.8 - 2020.12. [GitHub](https://github.com/Hydr0li/UniversitiesRankingsRationality)
 
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
+Work Experience
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* China Tower Xi'an Branch. Software Development Engineer and Data Analytic group leader. 2021.2 - 2021.7. [GitHub](https://github.com/Hydr0li/ChinaTower)
+* China Mobile (Shaanxi) Cloud Computing Center. Data Science and after-sale technical problem fix group attendee. Summer 2019.
 
-Publications
+Contact
 ======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+* Email: [hydr0@bu.edu](mailto:hydr0@bu.edu)
+* Phone: (540) 998-6676
+* GitHub: [Hydr0li](https://github.com/Hydr0li)
+* LinkedIn: [haizhou-li](https://www.linkedin.com/in/haizhou-li/)

@@ -1,0 +1,304 @@
+/* ==========================================================================
+   Hydro personal site custom layer
+   ========================================================================== */
+
+:root {
+  --hydro-ink: #13202f;
+  --hydro-muted: #5d6878;
+  --hydro-blue: #0b78d0;
+  --hydro-cyan: #19b6c8;
+  --hydro-lime: #9bcf28;
+  --hydro-rose: #e24f7a;
+  --hydro-panel: rgba(255, 255, 255, 0.82);
+  --hydro-line: rgba(19, 32, 47, 0.12);
+}
+
+body {
+  background:
+    radial-gradient(circle at 8% 12%, rgba(25, 182, 200, 0.17), transparent 24rem),
+    radial-gradient(circle at 88% 4%, rgba(226, 79, 122, 0.13), transparent 22rem),
+    linear-gradient(135deg, #f7fbff 0%, #eef5f5 48%, #fffaf1 100%);
+  color: var(--hydro-ink);
+}
+
+body:before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(11, 120, 208, 0.065) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11, 120, 208, 0.065) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent 75%);
+  z-index: -1;
+}
+
+.masthead {
+  background: rgba(255, 255, 255, 0.76);
+  border-bottom: 1px solid var(--hydro-line);
+  backdrop-filter: blur(16px);
+}
+
+.greedy-nav {
+  background: transparent;
+}
+
+.site-title {
+  font-weight: 800;
+}
+
+.page__content a,
+.author__urls a {
+  color: #075c9f;
+}
+
+.author__avatar img[src*="haizhou-li-avatar"] {
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: 66% 32%;
+  box-shadow: 0 18px 45px rgba(11, 120, 208, 0.18);
+}
+
+@media screen and (min-width: 1024px) {
+  .author__avatar img[src*="haizhou-li-avatar"] {
+    width: 175px;
+    height: 175px;
+  }
+}
+
+.hydro-hero {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2.4rem;
+  padding: clamp(1.4rem, 4vw, 3rem);
+  border: 1px solid var(--hydro-line);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(239, 249, 252, 0.84)),
+    linear-gradient(120deg, rgba(11, 120, 208, 0.16), rgba(155, 207, 40, 0.12));
+  box-shadow: 0 24px 70px rgba(19, 32, 47, 0.09);
+}
+
+.hydro-hero:before {
+  content: "";
+  position: absolute;
+  top: -35%;
+  right: -18%;
+  width: 22rem;
+  height: 22rem;
+  border: 1px solid rgba(11, 120, 208, 0.18);
+  border-radius: 50%;
+  background:
+    repeating-conic-gradient(from 12deg, rgba(25, 182, 200, 0.24) 0deg 8deg, transparent 8deg 18deg);
+  animation: hydro-spin 28s linear infinite;
+}
+
+.hydro-hero > * {
+  position: relative;
+}
+
+.hydro-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+  color: #075c9f;
+  font-family: $sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.hydro-kicker:before {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: var(--hydro-lime);
+  box-shadow: 0 0 0 5px rgba(155, 207, 40, 0.18);
+}
+
+.hydro-title {
+  max-width: 48rem;
+  margin-bottom: 0.75rem;
+  color: var(--hydro-ink);
+  font-family: $sans-serif;
+  font-size: clamp(2rem, 7vw, 4rem);
+  line-height: 1;
+}
+
+.hydro-lead {
+  max-width: 44rem;
+  color: #344254;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.hydro-actions,
+.hydro-stats,
+.hydro-card-grid,
+.hydro-timeline,
+.hydro-contact-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.hydro-actions {
+  grid-template-columns: repeat(auto-fit, minmax(10rem, max-content));
+  margin-top: 1.4rem;
+}
+
+.hydro-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.55rem;
+  padding: 0.65rem 0.95rem;
+  border: 1px solid var(--hydro-line);
+  border-radius: 8px;
+  background: #102034;
+  color: #fff !important;
+  font-family: $sans-serif;
+  font-weight: 800;
+  text-decoration: none !important;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.hydro-button:hover {
+  background: #075c9f;
+  box-shadow: 0 14px 28px rgba(11, 120, 208, 0.22);
+  transform: translateY(-2px);
+}
+
+.hydro-button--ghost {
+  background: rgba(255, 255, 255, 0.66);
+  color: var(--hydro-ink) !important;
+}
+
+.hydro-stats {
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  margin: 2rem 0;
+}
+
+.hydro-stat,
+.hydro-card,
+.hydro-timeline-item,
+.hydro-contact {
+  border: 1px solid var(--hydro-line);
+  border-radius: 8px;
+  background: var(--hydro-panel);
+  box-shadow: 0 14px 35px rgba(19, 32, 47, 0.07);
+  backdrop-filter: blur(14px);
+}
+
+.hydro-stat {
+  padding: 1rem;
+}
+
+.hydro-stat strong {
+  display: block;
+  color: var(--hydro-ink);
+  font-family: $sans-serif;
+  font-size: 1.65rem;
+  line-height: 1;
+}
+
+.hydro-stat span {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--hydro-muted);
+  font-family: $sans-serif;
+  font-size: 0.82rem;
+}
+
+.hydro-section {
+  margin: 2.4rem 0 0;
+}
+
+.hydro-section h2 {
+  border-bottom: 0;
+  color: var(--hydro-ink);
+  font-family: $sans-serif;
+  font-size: 1.35rem;
+}
+
+.hydro-card-grid {
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+
+.hydro-card {
+  position: relative;
+  overflow: hidden;
+  padding: 1.1rem;
+}
+
+.hydro-card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.22rem;
+  background: linear-gradient(90deg, var(--hydro-blue), var(--hydro-cyan), var(--hydro-lime));
+}
+
+.hydro-card h3,
+.hydro-timeline-item h3,
+.hydro-contact h3 {
+  margin-top: 0;
+  font-family: $sans-serif;
+  font-size: 1rem;
+}
+
+.hydro-card p,
+.hydro-timeline-item p,
+.hydro-contact p {
+  color: #3d4b5f;
+}
+
+.hydro-card__meta {
+  display: block;
+  margin-top: 0.75rem;
+  color: var(--hydro-muted);
+  font-family: $sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.hydro-timeline {
+  grid-template-columns: 1fr;
+}
+
+.hydro-timeline-item {
+  padding: 1.1rem;
+  border-left: 0.25rem solid var(--hydro-cyan);
+}
+
+.hydro-contact-grid {
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+}
+
+.hydro-contact {
+  padding: 1rem;
+}
+
+.hydro-contact a {
+  word-break: break-word;
+}
+
+@keyframes hydro-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hydro-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .hydro-button {
+    width: 100%;
+  }
+}
