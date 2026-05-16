@@ -102,13 +102,13 @@ redirect_from:
   <h2 data-lang="en">Contact</h2>
   <h2 data-lang="zh">联系</h2>
   <ul data-lang="en">
-    <li>Email: <a href="mailto:hydr0@bu.edu">hydr0@bu.edu</a></li>
+    <li>Email: <a href="mailto:yunplayer.tb5@gmail.com">yunplayer.tb5@gmail.com</a></li>
+    <li>Phone: <a href="tel:+8615001058782">+86 15001058782</a></li>
     <li>GitHub: <a href="https://github.com/Hydr0li">Hydr0li</a></li>
-    <li>LinkedIn: <a href="https://www.linkedin.com/in/haizhou-li/">haizhou-li</a></li>
   </ul>
   <ul data-lang="zh">
-    <li>Email: <a href="mailto:hydr0@bu.edu">hydr0@bu.edu</a></li>
+    <li>Email: <a href="mailto:yunplayer.tb5@gmail.com">yunplayer.tb5@gmail.com</a></li>
+    <li>Phone: <a href="tel:+8615001058782">+86 15001058782</a></li>
     <li>GitHub: <a href="https://github.com/Hydr0li">Hydr0li</a></li>
-    <li>LinkedIn: <a href="https://www.linkedin.com/in/haizhou-li/">haizhou-li</a></li>
   </ul>
 </section>
