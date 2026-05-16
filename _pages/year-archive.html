@@ -1,19 +1,32 @@
 ---
 layout: archive
-permalink: /year-archive/
-title: "Blog posts"
+permalink: /blog/
+title: "Blog"
 author_profile: true
 redirect_from:
+  - /year-archive/
   - /wordpress/blog-posts/
 ---
 
 {% include base_path %}
-{% capture written_year %}'None'{% endcapture %}
-{% for post in site.posts %}
-  {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-  {% if year != written_year %}
-    <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
-    {% capture written_year %}{{ year }}{% endcapture %}
-  {% endif %}
-  {% include archive-single.html %}
-{% endfor %}
+
+<p>This page is reserved for technical notes, project writeups, and longer-form posts. Add Markdown files to <code>_posts/</code> and they will appear here automatically.</p>
+
+{% assign visible_posts = site.posts | where_exp: "post", "post.hidden != true" %}
+
+{% if visible_posts.size > 0 %}
+  {% capture written_year %}'None'{% endcapture %}
+  {% for post in visible_posts %}
+    {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+    {% if year != written_year %}
+      <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
+      {% capture written_year %}{{ year }}{% endcapture %}
+    {% endif %}
+    {% include archive-single.html %}
+  {% endfor %}
+{% else %}
+  <div class="hydro-empty-blog">
+    <strong>No posts yet.</strong>
+    <span>Draft a new file such as <code>_posts/2026-05-16-my-note.md</code> to publish the first entry.</span>
+  </div>
+{% endif %}
