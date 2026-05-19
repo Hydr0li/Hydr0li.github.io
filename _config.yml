@@ -12,7 +12,7 @@ title                    : "Haizhou \"Hydro\" Li"
 title_separator          : "-"
 name                     : &name "Haizhou Li"
 description              : &description "Senior AI engineer building LLM agents, multimodal systems, NLP/OCR pipelines, and AI product experiences."
-url                      : https://hydr0li.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://hydroli.top # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "Hydr0li/Hydr0li.github.io"
 
@@ -27,7 +27,7 @@ author:
   bio              : "Senior AI Engineer. LLM agents, multimodal AI, NLP/OCR, and data systems."
   location         : "Shanghai, China"
   employer         : "Bosch Automotive Components"
-  uri              : "https://hydr0li.github.io"
+  uri              : "https://hydroli.top"
   email            : "yunplayer.tb5@gmail.com"
 
   # Academic websites
